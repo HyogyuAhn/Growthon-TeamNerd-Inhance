@@ -1,2 +1,13 @@
-# Growthon-TeamNerd-Inhance
- 2024 Growthon Inhance Android app
+# 2024 Growthon
+- 2024 Growthon 팀원 공유용
+- Inhance App : 인하대 학생들을 위한 올인원 서비스 (with ChatGPT 4o)
+
+## Contributers
+
+| 이름  | 역할                           |
+| --- | ---------------------------- |
+| 안효규 | `프론트` `백엔드`                  |
+| 박상준 | `프로젝트 기획` `프롬프트 엔지니어링` `백엔드` |
+| 장소현 | `프로젝트 기획` `백엔드`              |
+| 우연정 | `디자인 기획` `디자인`               |
+| 이승혜 | `디자인 기획` `디자인`               |
