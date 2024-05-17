@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Login Activity XML Styles -->
+    <style name="loginLabel">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <style name="login_schoolName">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <style name="login_error">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#FF1F1F</item>
+    </style>
+</resources>

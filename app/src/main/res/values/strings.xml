@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Inha-project</string>
+
+    <!-- Intro XML -->
+    <string name="intro_logo">Intro Logo</string>
+
+    <!-- Login Activity XML String -->
+    <string name="loginLogo">Logo Image</string>
+    <string name="loginID">학번 (8자리)</string>
+    <string name="loginPW">비밀번호</string>
+    <string name="login">로그인</string>
+    <string name="register">회원가입</string>
+    <string name="login_schoolName">인하대학교 (inha.ac.kr)</string>
+
+</resources>

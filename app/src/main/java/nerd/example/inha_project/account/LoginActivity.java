@@ -1,0 +1,69 @@
+package nerd.example.inha_project.account;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import nerd.example.inha_project.R;
+
+public class LoginActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_login);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        TextView error = (TextView) findViewById(R.id.text_error);
+
+        EditText id = (EditText) findViewById(R.id.text_id);
+        EditText pw = (EditText) findViewById(R.id.text_pw);
+
+        Button btnLogin = (Button) findViewById(R.id.btn_login);
+        Button btnRegister = (Button) findViewById(R.id.btn_register);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (id.getText().toString().isEmpty()) error.setText("학번을 입력해 주세요.");
+                else if (pw.getText().toString().isEmpty()) error.setText("비밀번호를 입력해 주세요.");
+                else if (id.getText().toString().length() != 8) error.setText("학번은 8자리로 입력해 주세요.");
+                else {
+                    if (AccountManager.loginRequest(id.getText().toString(), pw.getText().toString())) {
+                        error.setText("");
+                        Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
+                    } else {
+                        error.setText("학번 또는 비밀번호가 올바르지 않습니다.");
+                    }
+                }
+            }
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                error.setText("");
+                Toast.makeText(LoginActivity.this, "회원가입 버튼", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+    }
+
+    private void sendToast(String msg) {
+        Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
+    }
+}
