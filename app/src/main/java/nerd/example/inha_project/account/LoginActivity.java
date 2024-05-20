@@ -1,5 +1,8 @@
 package nerd.example.inha_project.account;
 
+import static nerd.example.inha_project.Util.*;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +17,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import nerd.example.inha_project.R;
+import nerd.example.inha_project.account.register.RegisterFragmentManager;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -45,7 +49,10 @@ public class LoginActivity extends AppCompatActivity {
                 else {
                     if (AccountManager.loginRequest(id.getText().toString(), pw.getText().toString())) {
                         error.setText("");
-                        Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
+                        sendToast(LoginActivity.this, "로그인 성공");
+                        Intent intent = new Intent(getApplicationContext(), NicknameActivity.class);
+                        startActivity(intent);
+                        finish();
                     } else {
                         error.setText("학번 또는 비밀번호가 올바르지 않습니다.");
                     }
@@ -56,14 +63,12 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                error.setText("");
-                Toast.makeText(LoginActivity.this, "회원가입 버튼", Toast.LENGTH_SHORT).show();
-
+                sendToast(LoginActivity.this, "클릭");
+                Intent intent = new Intent(getApplicationContext(), RegisterFragmentManager.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
 
-    private void sendToast(String msg) {
-        Toast.makeText(LoginActivity.this, msg, Toast.LENGTH_SHORT).show();
-    }
 }
