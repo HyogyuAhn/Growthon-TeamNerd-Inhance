@@ -10,6 +10,7 @@
     <string name="loginPW">비밀번호</string>
     <string name="login">로그인</string>
     <string name="register">회원가입</string>
+    <string name="findPW">비밀번호 찾기</string>
     <string name="login_schoolName">인하대학교 (inha.ac.kr)</string>
 
     <!-- Nickname Change Activity XML String -->
@@ -19,6 +20,7 @@
     <string name="nick_change">변경 닉네임</string>
 
     <!-- Register : Terms Fragment XML String -->
+    <string name="terms_title">회원가입</string>
     <string name="terms_check_all">모두 동의(선택 정보 포함)</string>
     <string name="terms_check_term">[필수] 이용약관 동의</string>
     <string name="terms_check_privacy">[필수] 개인정보 처리방침 동의</string>

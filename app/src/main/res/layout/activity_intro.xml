@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,15 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".IntroActivity"
     android:orientation="vertical"
-    android:background="@drawable/intro_background">
+    android:background="@drawable/intro_background"
+    android:gravity="center">
 
     <ImageView
         android:layout_width="335dp"
         android:layout_height="101dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:contentDescription="@string/intro_logo"
         android:src="@drawable/intro_logo"/>
-
-
-</RelativeLayout>
+</LinearLayout>

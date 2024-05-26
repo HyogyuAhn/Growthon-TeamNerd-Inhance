@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Inhaproject"
         tools:targetApi="31">
         <activity
-            android:name=".account.NicknameActivity"
-            android:exported="false" />
-        <activity
             android:name=".account.LoginActivity"
             android:exported="false" />
         <activity android:name=".account.register.RegisterFragmentManager"

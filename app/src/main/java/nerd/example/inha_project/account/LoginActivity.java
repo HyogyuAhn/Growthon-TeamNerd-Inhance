@@ -50,9 +50,9 @@ public class LoginActivity extends AppCompatActivity {
                     if (AccountManager.loginRequest(id.getText().toString(), pw.getText().toString())) {
                         error.setText("");
                         sendToast(LoginActivity.this, "로그인 성공");
-                        Intent intent = new Intent(getApplicationContext(), NicknameActivity.class);
-                        startActivity(intent);
-                        finish();
+                        //Intent intent = new Intent(getApplicationContext(), NicknameActivity.class);
+                        //startActivity(intent);
+                        //finish();
                     } else {
                         error.setText("학번 또는 비밀번호가 올바르지 않습니다.");
                     }

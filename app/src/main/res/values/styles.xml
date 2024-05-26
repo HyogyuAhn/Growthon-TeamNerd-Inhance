@@ -17,6 +17,11 @@
         <item name="android:textColor">#FF1F1F</item>
     </style>
 
+    <style name="findPW">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#878787</item>
+    </style>
+
     <!-- Nickname Change Activity XML Styles -->
     <style name="nick_title">
         <item name="android:textSize">20sp</item>
@@ -32,5 +37,13 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#000000</item>
     </style>
+
+    <!-- Register : Terms Fragment XML String -->
+    <style name="terms_title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
 
 </resources>

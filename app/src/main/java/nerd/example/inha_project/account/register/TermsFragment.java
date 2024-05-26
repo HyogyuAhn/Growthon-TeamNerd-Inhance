@@ -31,30 +31,18 @@ public class TermsFragment extends Fragment {
 
         btnNext = view.findViewById(R.id.terms_btn_next);
 
-        checkAll.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            checkTerm.setChecked(isChecked);
-            checkPrivacy.setChecked(isChecked);
-            checkPush.setChecked(isChecked);
-        });
+        addAllcheckListener(checkAll, new CheckBox[] { checkTerm, checkPrivacy, checkPush });
 
         CheckBox.OnCheckedChangeListener listener = (buttonView, isChecked) -> {
             boolean allChecked = checkTerm.isChecked() && checkPrivacy.isChecked() && checkPush.isChecked();
             if (!isChecked) {
                 checkAll.setOnCheckedChangeListener(null);
                 checkAll.setChecked(false);
-                checkAll.setOnCheckedChangeListener((buttonView1, isChecked1) -> {
-                    checkTerm.setChecked(isChecked1);
-                    checkPrivacy.setChecked(isChecked1);
-                    checkPush.setChecked(isChecked1);
-                });
+                addAllcheckListener(checkAll, new CheckBox[] { checkTerm, checkPrivacy, checkPush });
             } else if (allChecked) {
                 checkAll.setOnCheckedChangeListener(null);
                 checkAll.setChecked(true);
-                checkAll.setOnCheckedChangeListener((buttonView1, isChecked1) -> {
-                    checkTerm.setChecked(isChecked1);
-                    checkPrivacy.setChecked(isChecked1);
-                    checkPush.setChecked(isChecked1);
-                });
+                addAllcheckListener(checkAll, new CheckBox[] { checkTerm, checkPrivacy, checkPush });
             }
             btnNext.setEnabled(checkTerm.isChecked() && checkPrivacy.isChecked());
         };
@@ -70,4 +58,14 @@ public class TermsFragment extends Fragment {
 
         return view;
     }
+
+    private static void addAllcheckListener(CheckBox checkAll, CheckBox[] checkboxes) {
+        checkAll.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            for (CheckBox checkbox : checkboxes) {
+                checkbox.setChecked(isChecked);
+            }
+        });
+    }
+
+
 }
