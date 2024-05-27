@@ -11,9 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 
-import nerd.example.inha_project.IntroActivity;
 import nerd.example.inha_project.R;
-import nerd.example.inha_project.Util;
+import nerd.example.inha_project.util.Util;
 
 public class TermsFragment extends Fragment {
 

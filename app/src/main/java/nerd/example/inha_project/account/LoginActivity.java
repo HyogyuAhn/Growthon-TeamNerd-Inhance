@@ -1,14 +1,11 @@
 package nerd.example.inha_project.account;
 
-import static nerd.example.inha_project.Util.*;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 import nerd.example.inha_project.R;
 import nerd.example.inha_project.account.register.RegisterFragmentManager;
+import nerd.example.inha_project.database.AccountManager;
+import nerd.example.inha_project.database.DBCallback;
+import nerd.example.inha_project.database.LoginCallback;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -47,15 +47,19 @@ public class LoginActivity extends AppCompatActivity {
                 else if (pw.getText().toString().isEmpty()) error.setText("비밀번호를 입력해 주세요.");
                 else if (id.getText().toString().length() != 8) error.setText("학번은 8자리로 입력해 주세요.");
                 else {
-                    if (AccountManager.loginRequest(id.getText().toString(), pw.getText().toString())) {
-                        error.setText("");
-                        sendToast(LoginActivity.this, "로그인 성공");
-                        //Intent intent = new Intent(getApplicationContext(), NicknameActivity.class);
-                        //startActivity(intent);
-                        //finish();
-                    } else {
-                        error.setText("학번 또는 비밀번호가 올바르지 않습니다.");
-                    }
+                    AccountManager.loginRequest(id.getText().toString(), pw.getText().toString(), new LoginCallback() {
+                        @Override
+                        public void onLoginResult(boolean success) {
+                            if (success) {
+                                error.setText("로그인 성공");
+                                //Intent intent = new Intent(getApplicationContext(), NicknameActivity.class);
+                                //startActivity(intent);
+                                //finish();
+                            } else {
+                                error.setText("학번 또는 비밀번호가 올바르지 않습니다.");
+                            }
+                        }
+                    });
                 }
             }
         });
@@ -63,10 +67,10 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendToast(LoginActivity.this, "클릭");
                 Intent intent = new Intent(getApplicationContext(), RegisterFragmentManager.class);
                 startActivity(intent);
                 finish();
+
             }
         });
     }
