@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:paddingTop="16dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,55 +12,182 @@
         tools:ignore="UselessParent">
 
         <ImageView
-            android:id="@+id/nickname_back"
+            android:id="@+id/terms_back"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="6dp"
             android:layout_centerVertical="true"
-            android:contentDescription="@string/terms_title"
+            android:contentDescription="@string/register_title"
             android:src="@drawable/back_arrow" />
 
         <TextView
             android:layout_width="118dp"
             android:layout_height="30dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="10dp"
-            android:text="@string/terms_title"
-            android:textAppearance="@style/terms_title" />
+            android:text="@string/register_title"
+            android:textAppearance="@style/register_title" />
 
     </RelativeLayout>
-    <CheckBox
-        android:id="@+id/terms_check_all"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_check_all" />
 
-    <CheckBox
-        android:id="@+id/terms_check_term"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_check_term" />
-
-    <CheckBox
-        android:id="@+id/terms_check_privacy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_check_privacy" />
-
-    <CheckBox
-        android:id="@+id/terms_check_push"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/terms_check_push"/>
-
-    <Button
-        android:id="@+id/terms_btn_next"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="3dp"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/register_grayline">
+
+        <View
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/register_progressline" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="58dp">
+
+        <TextView
+            android:id="@+id/terms_info"
+            android:layout_width="336dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:text="@string/terms_info"
+            android:textAppearance="@style/terms_info" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="143dp" >
+
+            <CheckBox
+                android:id="@+id/terms_check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                style="@style/terms_checkbox" />
+
+            <TextView
+                android:id="@+id/terms_text_all"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="57dp"
+                android:text="@string/terms_check_all"
+                android:textAppearance="@style/terms_boxtext"
+                android:gravity="center" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="190dp"
+            android:background="#E6E6E6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="200dp" >
+
+            <CheckBox
+                android:id="@+id/terms_check_term"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                style="@style/terms_checkbox" />
+
+            <TextView
+                android:id="@+id/terms_text_term"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="57dp"
+                android:text="@string/terms_check_term"
+                android:textAppearance="@style/terms_boxtext"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="240dp" >
+
+            <CheckBox
+                android:id="@+id/terms_check_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                style="@style/terms_checkbox" />
+
+            <TextView
+                android:id="@+id/terms_text_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="57dp"
+                android:text="@string/terms_check_privacy"
+                android:textAppearance="@style/terms_boxtext"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="280dp" >
+
+            <CheckBox
+                android:id="@+id/terms_check_push"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="16dp"
+                style="@style/terms_checkbox" />
+
+            <TextView
+                android:id="@+id/terms_text_push"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginStart="57dp"
+                android:text="@string/terms_check_push"
+                android:textAppearance="@style/terms_boxtext"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.widget.Button
+        android:id="@+id/terms_btn_next"
+        android:layout_width="347dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:text="@string/terms_btn_next"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@drawable/register_btn_color"
         android:enabled="false" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="37dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/login_logo"
+            android:contentDescription="@string/login_Logo"
+            />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

@@ -5,27 +5,31 @@
     <string name="intro_logo">Intro Logo</string>
 
     <!-- Login Activity XML String -->
-    <string name="loginLogo">Logo Image</string>
-    <string name="loginID">학번 (8자리)</string>
-    <string name="loginPW">비밀번호</string>
-    <string name="login">로그인</string>
-    <string name="register">회원가입</string>
-    <string name="findPW">비밀번호 찾기</string>
+    <string name="login_Logo">Logo Image</string>
+    <string name="login_ID">학번 (8자리)</string>
+    <string name="login_PW">비밀번호</string>
+    <string name="login_login">로그인</string>
+    <string name="login_register">회원가입</string>
+    <string name="login_findPW">비밀번호 찾기</string>
     <string name="login_schoolName">인하대학교 (inha.ac.kr)</string>
 
-    <!-- Nickname Change Activity XML String -->
-    <string name="nick_title">닉네임 변경</string>
-    <string name="nick_now">현재 닉네임</string>
-    <string name="nick_txt_now">None</string>
-    <string name="nick_change">변경 닉네임</string>
+    <!-- Register Common XML String -->
+    <string name="register_title">회원가입</string>
 
     <!-- Register : Terms Fragment XML String -->
-    <string name="terms_title">회원가입</string>
+    <string name="terms_info">LOGO 서비스 이용약관에 동의해주세요.</string>
     <string name="terms_check_all">모두 동의(선택 정보 포함)</string>
     <string name="terms_check_term">[필수] 이용약관 동의</string>
     <string name="terms_check_privacy">[필수] 개인정보 처리방침 동의</string>
     <string name="terms_check_push">[선택] 푸시 알림 동의</string>
     <string name="terms_btn_next">동의하고 가입하기</string>
+
+    <!-- Register : Email Fragment XML String -->
+    <string name="email_info">학교 이메일을 입력해주세요.</string>
+    <string name="email_hint">email@inha.edu</string>
+    <string name="email_btn_next">다음</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

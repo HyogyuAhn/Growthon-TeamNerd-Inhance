@@ -6,6 +6,7 @@ public class User {
 
     private String id;
     private String pw;
+    private String email;
     private String nickname;
     private String profileImage;
     private String statusMessage;
@@ -23,15 +24,24 @@ public class User {
         this.pw = pw;
     }
 
-    public User(String id, String pw, String nickname) {
+    public User(String id, String pw, String email) {
         this.id = id;
         this.pw = pw;
+        this.email = email;
+    }
+
+    public User(String id, String pw, String email, String nickname) {
+        this.id = id;
+        this.pw = pw;
+        this.email = email;
         this.nickname = nickname;
     }
 
-    public User(String id, String pw, String nickname, String profileImage, String statusMessage) {
+
+    public User(String id, String pw, String email, String nickname, String profileImage, String statusMessage) {
         this.id = id;
         this.pw = pw;
+        this.email = email;
         this.nickname = nickname;
         this.profileImage = profileImage;
         this.statusMessage = statusMessage;
@@ -43,6 +53,10 @@ public class User {
 
     public void setPassword(String pw) {
         this.pw = pw;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setNickname(String nickname) {
@@ -57,9 +71,10 @@ public class User {
         this.statusMessage = statusMessage;
     }
 
-    public void setData(String id, String pw, String nickname, String profileImage, String statusMessage) {
+    public void setData(String id, String pw, String email, String nickname, String profileImage, String statusMessage) {
         this.id = id;
         this.pw = pw;
+        this.email = email;
         this.nickname = nickname;
         this.profileImage = profileImage;
         this.statusMessage = statusMessage;
@@ -71,6 +86,10 @@ public class User {
 
     public String getPassword() {
         return this.pw;
+    }
+
+    public String getEmail() {
+        return this.email;
     }
 
     public String getNickname() {

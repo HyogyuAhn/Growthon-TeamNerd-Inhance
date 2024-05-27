@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="134dp"
         android:src="@drawable/login_logo"
-        android:contentDescription="@string/loginLogo"
+        android:contentDescription="@string/login_Logo"
         />
 
     <RelativeLayout
@@ -41,7 +41,7 @@
                     android:layout_width="295dp"
                     android:layout_height="20dp"
                     android:autofillHints="학번 (8자리)"
-                    android:hint="@string/loginID"
+                    android:hint="@string/login_ID"
                     android:inputType="number"
                     android:textAppearance="@style/loginLabel"
                     android:lineSpacingExtra="3sp"
@@ -68,7 +68,7 @@
                     android:id="@+id/text_pw"
                     android:layout_width="295dp"
                     android:layout_height="20dp"
-                    android:hint="@string/loginPW"
+                    android:hint="@string/login_PW"
                     android:autofillHints="비밀번호"
                     android:inputType="textPassword"
                     android:textAppearance="@style/loginLabel"
@@ -105,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/login_btn_login_back"
-                    android:text="@string/login"
+                    android:text="@string/login_login"
                     android:textColor="#ffffff" />
 
             </RelativeLayout>
@@ -120,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/login_btn_register_back"
-                    android:text="@string/register"
+                    android:text="@string/login_register"
                     android:textColor="#ffffff"
                     />
 
@@ -131,7 +131,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="18dp"
                 android:layout_marginTop="235dp"
-                android:text="@string/findPW"
+                android:text="@string/login_findPW"
                 android:textAppearance="@style/findPW"
                 android:gravity="center"
                 />
@@ -187,7 +187,7 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:src="@drawable/login_logo"
-            android:contentDescription="@string/loginLogo"
+            android:contentDescription="@string/login_Logo"
             />
 
     </RelativeLayout>

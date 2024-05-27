@@ -1,7 +1,5 @@
 package nerd.example.inha_project.database;
 
-import static nerd.example.inha_project.util.Util.*;
-
 import android.annotation.SuppressLint;
 
 import androidx.annotation.NonNull;
@@ -11,10 +9,12 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import nerd.example.inha_project.account.User;
 import nerd.example.inha_project.database.callback.CreateAccountCallback;
 import nerd.example.inha_project.database.callback.DBCallback;
+import nerd.example.inha_project.database.callback.EmailCallback;
 import nerd.example.inha_project.database.callback.LoginCallback;
 
 public class AccountManager {
@@ -67,16 +67,38 @@ public class AccountManager {
         }
     }
 
-
-
     public static void loginRequest(String id, String pw, LoginCallback callback) {
         getAccountData(id, new DBCallback() {
             @Override
             public void onCallback(User user) {
-                if (user != null && user.getPassword().equals(pw)) callback.onLoginResult(true);
-                else callback.onLoginResult(false);
+                callback.onLoginResult(user != null && user.getPassword().equals(pw));
             }
         });
+    }
+
+    public static void checkDuplcateEmail(String email, EmailCallback callback) {
+        db.collection("users")
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        boolean isDuplicate = false;
+
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            String dbEmail = document.getString("email");
+                            if (email.equalsIgnoreCase(dbEmail) && !dbEmail.equals("null")) {
+                                isDuplicate = true;
+                                break;
+                            }
+                        }
+                        if (isDuplicate) {
+                            callback.onDuplicateFound(email);
+                        } else {
+                            callback.onNoDuplicateFound();
+                        }
+                    } else {
+                        callback.onError(task.getException());
+                    }
+                });
     }
 
 }
