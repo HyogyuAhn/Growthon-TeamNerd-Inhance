@@ -1,6 +1,6 @@
 package nerd.example.inha_project.database.callback;
 
-public interface EmailCallback {
+public interface DuplicateCallback {
 
     void onDuplicateFound(String email);
     void onNoDuplicateFound();

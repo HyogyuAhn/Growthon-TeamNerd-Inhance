@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import nerd.example.inha_project.R;
 import nerd.example.inha_project.database.AccountManager;
-import nerd.example.inha_project.database.callback.EmailCallback;
+import nerd.example.inha_project.database.callback.DuplicateCallback;
 import nerd.example.inha_project.util.Util;
 
 public class EmailFragment extends Fragment {
@@ -53,7 +53,7 @@ public class EmailFragment extends Fragment {
                     alert.setText("이메일 형식이 올바르지 않습니다.");
                     btnNext.setEnabled(false);
                 } else {
-                    AccountManager.checkDuplcateEmail(email.getText().toString(), new EmailCallback() {
+                    AccountManager.checkDuplicate(CHECK_TYPE.EMAIL, email.getText().toString(), new DuplicateCallback() {
                         @Override
                         public void onDuplicateFound(String email) {
                             alert.setText("이미 존재하는 이메일입니다. " + email);

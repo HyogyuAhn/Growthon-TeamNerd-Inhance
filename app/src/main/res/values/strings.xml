@@ -28,8 +28,11 @@
     <string name="email_info">학교 이메일을 입력해주세요.</string>
     <string name="email_hint">email@inha.edu</string>
     <string name="email_btn_next">다음</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Register : ID Fragment XML String -->
+    <string name="id_info">로그인에 사용할\n아이디(학번)를 입력해주세요.</string>
+    <string name="id_hint">아이디(학번)</string>
+    <string name="id_btn_next">다음</string>
 
 
 </resources>

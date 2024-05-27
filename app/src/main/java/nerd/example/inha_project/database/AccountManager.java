@@ -12,9 +12,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import nerd.example.inha_project.account.User;
+import nerd.example.inha_project.account.register.CHECK_TYPE;
 import nerd.example.inha_project.database.callback.CreateAccountCallback;
 import nerd.example.inha_project.database.callback.DBCallback;
-import nerd.example.inha_project.database.callback.EmailCallback;
+import nerd.example.inha_project.database.callback.DuplicateCallback;
 import nerd.example.inha_project.database.callback.LoginCallback;
 
 public class AccountManager {
@@ -76,7 +77,7 @@ public class AccountManager {
         });
     }
 
-    public static void checkDuplcateEmail(String email, EmailCallback callback) {
+    public static void checkDuplicate(CHECK_TYPE type, String compareStr, DuplicateCallback callback) {
         db.collection("users")
                 .get()
                 .addOnCompleteListener(task -> {
@@ -84,14 +85,14 @@ public class AccountManager {
                         boolean isDuplicate = false;
 
                         for (QueryDocumentSnapshot document : task.getResult()) {
-                            String dbEmail = document.getString("email");
-                            if (email.equalsIgnoreCase(dbEmail) && !dbEmail.equals("null")) {
+                            String data = document.getString(type.toString());
+                            if (compareStr.equalsIgnoreCase(data) && !data.equals("null")) {
                                 isDuplicate = true;
                                 break;
                             }
                         }
                         if (isDuplicate) {
-                            callback.onDuplicateFound(email);
+                            callback.onDuplicateFound(compareStr);
                         } else {
                             callback.onNoDuplicateFound();
                         }
