@@ -1,4 +1,4 @@
-package nerd.example.inha_project.database;
+package nerd.example.inha_project.database.callback;
 
 import nerd.example.inha_project.account.User;
 

@@ -3,7 +3,6 @@ package nerd.example.inha_project.database;
 import static nerd.example.inha_project.util.Util.*;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 
 import androidx.annotation.NonNull;
 
@@ -14,6 +13,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import nerd.example.inha_project.account.User;
+import nerd.example.inha_project.database.callback.CreateAccountCallback;
+import nerd.example.inha_project.database.callback.DBCallback;
+import nerd.example.inha_project.database.callback.LoginCallback;
 
 public class AccountManager {
 
@@ -22,13 +24,13 @@ public class AccountManager {
 
     private static User data = new User();
 
-    public static void createAccount(Context context, User user) {
+    public static void createAccount(User user, CreateAccountCallback callback) {
         if (user.getID() == null) {
-            sendToast(context, "ID is null");
+            callback.onFailure("학번(id)를 입력해 주세요.");
             return;
         }
         if (user.getPassword() == null) {
-            sendToast(context, "Password is null");
+            callback.onFailure("비밀번호를 입력해 주세요.");
             return;
         }
         if (user.getNickname() == null) {
@@ -36,8 +38,8 @@ public class AccountManager {
         }
         db.collection("users").document(user.getID())
                 .set(user)
-                .addOnSuccessListener(aVoid -> sendToast(context, "Success"))
-                .addOnFailureListener(e -> sendToast(context, e.getMessage()));
+                .addOnSuccessListener(aVoid -> callback.onSuccess())
+                .addOnFailureListener(e -> callback.onFailure(e.getMessage()));
     }
 
     public static void getAccountData(String id, DBCallback callback) {

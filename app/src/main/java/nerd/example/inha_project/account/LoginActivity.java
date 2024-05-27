@@ -16,8 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import nerd.example.inha_project.R;
 import nerd.example.inha_project.account.register.RegisterFragmentManager;
 import nerd.example.inha_project.database.AccountManager;
-import nerd.example.inha_project.database.DBCallback;
-import nerd.example.inha_project.database.LoginCallback;
+import nerd.example.inha_project.database.callback.LoginCallback;
 
 public class LoginActivity extends AppCompatActivity {
 
