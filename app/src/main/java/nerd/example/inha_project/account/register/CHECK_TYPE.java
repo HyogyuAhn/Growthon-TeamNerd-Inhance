@@ -5,7 +5,8 @@ import androidx.annotation.NonNull;
 public enum CHECK_TYPE {
 
     ID("id"),
-    EMAIL("email");
+    EMAIL("email"),
+    NICKNAME("nickname");
 
     private final String value;
 

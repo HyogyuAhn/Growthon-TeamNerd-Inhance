@@ -121,6 +121,7 @@ public class TermsFragment extends Fragment {
         checkPush.setOnCheckedChangeListener(listener);
 
         btnNext.setOnClickListener(v -> {
+            RegisterFragmentManager.user.setPushMessage(checkPush.isEnabled());
             ((RegisterFragmentManager) getActivity()).loadFragment(new EmailFragment());
         });
 

@@ -56,7 +56,7 @@ public class EmailFragment extends Fragment {
                     AccountManager.checkDuplicate(CHECK_TYPE.EMAIL, email.getText().toString(), new DuplicateCallback() {
                         @Override
                         public void onDuplicateFound(String email) {
-                            alert.setText("이미 존재하는 이메일입니다. " + email);
+                            alert.setText("이미 존재하는 이메일입니다.");
                         }
 
                         @Override
@@ -82,6 +82,7 @@ public class EmailFragment extends Fragment {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                RegisterFragmentManager.user.setPushMessage(false);
                 getActivity().onBackPressed();
             }
         });

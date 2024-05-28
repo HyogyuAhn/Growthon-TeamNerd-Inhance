@@ -11,7 +11,7 @@
         tools:ignore="UselessParent">
 
         <ImageView
-            android:id="@+id/id_back"
+            android:id="@+id/name_back"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginStart="10dp"
@@ -37,7 +37,7 @@
         android:background="@drawable/register_grayline">
 
         <View
-            android:layout_width="204dp"
+            android:layout_width="340dp"
             android:layout_height="match_parent"
             android:background="@drawable/register_progressline" />
 
@@ -49,11 +49,12 @@
         android:layout_marginTop="58dp">
 
         <TextView
+            android:id="@+id/name_info"
             android:layout_width="330dp"
             android:layout_height="55dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="32dp"
-            android:text="@string/id_info"
+            android:text="@string/name_info"
             android:textAppearance="@style/register_info" />
 
         <RelativeLayout
@@ -65,12 +66,11 @@
             android:background="@drawable/login_field">
 
             <EditText
-                android:id="@+id/text_id"
+                android:id="@+id/text_name"
                 android:layout_width="310dp"
                 android:layout_height="match_parent"
-                android:autofillHints="아이디(학번)"
-                android:hint="@string/id_hint"
-                android:inputType="number"
+                android:autofillHints="닉네임 입력"
+                android:hint="@string/name_hint"
                 android:textAppearance="@style/loginLabel"
                 android:lineSpacingExtra="3sp"
                 android:translationY="-1.33sp"
@@ -78,15 +78,24 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:singleLine="true"
-                android:maxLength="8"
+                android:maxLength="16"
                 android:maxLines="1"
                 android:background="@android:color/transparent"
                 />
 
+            <TextView
+                android:id="@+id/name_bit"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="( 10/16 )" />
+
         </RelativeLayout>
 
         <TextView
-            android:id="@+id/id_text_alert"
+            android:id="@+id/name_text_alert"
             android:layout_width="332dp"
             android:layout_height="17dp"
             android:layout_marginTop="165dp"
@@ -98,16 +107,15 @@
             />
 
         <android.widget.Button
-            android:id="@+id/id_btn_next"
+            android:id="@+id/name_btn_next"
             android:layout_width="347dp"
             android:layout_height="50dp"
             android:layout_marginTop="196dp"
             android:layout_centerHorizontal="true"
-            android:text="@string/id_btn_next"
+            android:text="@string/name_btn_next"
             android:textColor="@color/white"
             android:background="@drawable/rounded_button"
-            android:backgroundTint="@drawable/register_btn_color"
-            android:enabled="false" />
+            android:backgroundTint="@drawable/register_btn_color" />
 
 
     </RelativeLayout>

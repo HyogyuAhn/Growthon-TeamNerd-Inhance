@@ -34,5 +34,22 @@
     <string name="id_hint">아이디(학번)</string>
     <string name="id_btn_next">다음</string>
 
+    <!-- Register : Password Fragment XML String -->
+    <string name="password_info">로그인에 사용할\n비밀번호를 입력해주세요.</string>
+    <string name="password_hint">비밀번호 입력</string>
+    <string name="password_check_hint">비밀번호 확인</string>
+    <string name="password_alert">8~20자 이내</string>
+    <string name="password_warn">(영어, 숫자, ! @ # * 만 입력이 가능합니다.)</string>
+    <string name="password_check_alert">비밀번호 일치</string>
+    <string name="password_btn_next">다음</string>
+    <string name="password_imageDescription">checkbox</string>
+
+    <!-- Register : Name Fragment XML String -->
+    <string name="name_info">LOGO에서 사용할\n닉네임을 입력해주세요.</string>
+    <string name="name_hint">닉네임 입력</string>
+    <string name="name_btn_next">다음</string>
+
+    <string name="regcom_info">LOGO 회원가입이\n완료되었습니다.</string>
+
 
 </resources>

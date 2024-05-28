@@ -37,6 +37,46 @@ public class Util {
         return LOCAL_EMAIL_PATTERN.matcher(email.replace("@inha.edu", "")).matches();
     }
 
+    private static final Pattern PASSWORD_PATTERN = Pattern.compile("^[a-zA-Z0-9!@#*]{8,20}$");
+
+    public static boolean isValidPassword(String password) {
+        return PASSWORD_PATTERN.matcher(password).matches();
+    }
+
+    public static boolean isValidNickname(String nickname) {
+        int bitCount = 0;
+
+        for (int i = 0; i < nickname.length(); i++) {
+            char c = nickname.charAt(i);
+            if (Character.isDigit(c) || Character.isAlphabetic(c)) {
+                bitCount += 1;
+            } else if (isKorean(c)) {
+                bitCount += 2;
+            }
+        }
+
+        return bitCount >= 4 && bitCount <= 16;
+    }
+
+    public static int getNicknameBit(String nickname) {
+        int bitCount = 0;
+
+        for (int i = 0; i < nickname.length(); i++) {
+            char c = nickname.charAt(i);
+            if (Character.isDigit(c) || Character.isAlphabetic(c)) {
+                bitCount += 1;
+            } else if (isKorean(c)) {
+                bitCount += 2;
+            }
+        }
+
+        return bitCount;
+    }
+
+    private static boolean isKorean(char c) {
+        return (c >= 0xAC00 && c <= 0xD7A3);
+    }
+
     // 정수 확인
     public static boolean isInteger(String str) {
         return str.matches("^-?\\d+$");

@@ -22,19 +22,19 @@
         <item name="android:textColor">#878787</item>
     </style>
 
-    <!-- Register Common XML String -->
+    <!-- Register Common XML Styles -->
     <style name="register_title">
         <item name="android:textSize">24sp</item>
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">#000000</item>
     </style>
-
-    <!-- Register : Terms Fragment XML String -->
-    <style name="terms_info">
-        <item name="android:textSize">24sp</item>
+    <style name="register_info">
+        <item name="android:textSize">20sp</item>
         <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">#000000</item>
     </style>
+
+    <!-- Register : Terms Fragment XML Styles -->
     <style name="terms_checkbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:button">@drawable/register_checkbox_selector</item>
         <item name="android:drawablePadding">10dp</item>
@@ -45,19 +45,13 @@
         <item name="android:textColor">#000000</item>
     </style>
 
-    <!-- Register : Email Fragment XML String -->
-    <style name="email_info">
-        <item name="android:textSize">20sp</item>
-        <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#000000</item>
+
+    <!-- Register : Password Fragment XML Styles -->
+    <style name="password_alert">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#C2C2C2</item>
     </style>
 
-    <!-- Register : ID Fragment XML String -->
-    <style name="id_info">
-        <item name="android:textSize">20sp</item>
-        <item name="android:letterSpacing">-0.01</item>
-        <item name="android:textColor">#000000</item>
-    </style>
 
 
 </resources>

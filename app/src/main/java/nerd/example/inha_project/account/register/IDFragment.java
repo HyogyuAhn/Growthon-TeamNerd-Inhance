@@ -73,7 +73,7 @@ public class IDFragment extends Fragment {
 
         btnNext.setOnClickListener(v -> {
             RegisterFragmentManager.user.setID(id.getText().toString());
-            alert.setText("success");
+            ((RegisterFragmentManager) getActivity()).loadFragment(new PWFragment());
         });
 
         back.setOnClickListener(new View.OnClickListener() {

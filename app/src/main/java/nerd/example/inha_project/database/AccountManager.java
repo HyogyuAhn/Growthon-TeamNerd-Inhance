@@ -23,7 +23,6 @@ public class AccountManager {
     @SuppressLint("StaticFieldLeak")
     public static FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    private static User data = new User();
 
     public static void createAccount(User user, CreateAccountCallback callback) {
         if (user.getID() == null) {

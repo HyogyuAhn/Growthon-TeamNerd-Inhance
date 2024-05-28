@@ -11,6 +11,8 @@ public class User {
     private String profileImage;
     private String statusMessage;
 
+    private boolean pushMessage;
+
     public User() {
 
     }
@@ -71,13 +73,18 @@ public class User {
         this.statusMessage = statusMessage;
     }
 
-    public void setData(String id, String pw, String email, String nickname, String profileImage, String statusMessage) {
+    public void setPushMessage(boolean pushMessage) {
+        this.pushMessage = pushMessage;
+    }
+
+    public void setData(String id, String pw, String email, String nickname, String profileImage, String statusMessage, boolean pushMessage) {
         this.id = id;
         this.pw = pw;
         this.email = email;
         this.nickname = nickname;
         this.profileImage = profileImage;
         this.statusMessage = statusMessage;
+        this.pushMessage = pushMessage;
     }
 
     public String getID() {
@@ -104,8 +111,17 @@ public class User {
         return this.statusMessage;
     }
 
+    public boolean getPushMessage() {
+        return this.pushMessage;
+    }
+
     public void createRandomName() {
         Random random = new Random();
         this.nickname = "User" + (random.nextInt((999999 - 100000) + 1) + 100000);
+    }
+
+    public static String getRandomName() {
+        Random random = new Random();
+        return "User" + (random.nextInt((999999 - 100000) + 1) + 100000);
     }
 }
