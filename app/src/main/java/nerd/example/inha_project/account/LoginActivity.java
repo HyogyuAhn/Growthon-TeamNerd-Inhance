@@ -51,10 +51,9 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onLoginResult(boolean success) {
                             if (success) {
-                                error.setText("로그인 성공");
-                                //Intent intent = new Intent(getApplicationContext(), NicknameActivity.class);
-                                //startActivity(intent);
-                                //finish();
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                                finish();
                             } else {
                                 error.setText("학번 또는 비밀번호가 올바르지 않습니다.");
                             }
