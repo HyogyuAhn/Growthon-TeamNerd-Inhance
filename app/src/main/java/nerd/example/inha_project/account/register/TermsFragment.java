@@ -121,7 +121,12 @@ public class TermsFragment extends Fragment {
         checkPush.setOnCheckedChangeListener(listener);
 
         btnNext.setOnClickListener(v -> {
-            RegisterFragmentManager.user.setPushMessage(checkPush.isEnabled());
+            RegisterFragmentManager.user.setPushMessage(checkPush.isChecked());
+            if (checkPush.isChecked()) {
+                Util.sendToast(getContext(), "푸시 알림을 동의하셨습니다.");
+            } else {
+                Util.sendToast(getContext(), "푸시 알림을 거부하셨습니다.");
+            }
             ((RegisterFragmentManager) getActivity()).loadFragment(new EmailFragment());
         });
 
