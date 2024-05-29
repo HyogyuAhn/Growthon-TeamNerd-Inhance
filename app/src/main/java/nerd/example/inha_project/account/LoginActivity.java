@@ -13,6 +13,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import nerd.example.inha_project.MainActivity;
 import nerd.example.inha_project.R;
 import nerd.example.inha_project.account.register.RegisterFragmentManager;
 import nerd.example.inha_project.database.AccountManager;
