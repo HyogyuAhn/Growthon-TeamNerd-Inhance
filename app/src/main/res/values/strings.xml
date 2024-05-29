@@ -49,6 +49,8 @@
     <string name="name_hint">닉네임 입력</string>
     <string name="name_btn_next">다음</string>
 
+
+    <!-- Register : Complete Fragment XML String -->
     <string name="regcom_info">LOGO 회원가입이\n완료되었습니다.</string>
 
 

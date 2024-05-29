@@ -46,20 +46,17 @@ public class AccountManager {
         try {
             DocumentReference docRef = db.collection("users").document(id);
 
-            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                    if (task.isSuccessful()) {
-                        DocumentSnapshot document = task.getResult();
-                        if (document.exists()) {
-                            User user = document.toObject(User.class);
-                            callback.onCallback(user);
-                        } else {
-                            callback.onCallback(null);
-                        }
+            docRef.get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        User user = document.toObject(User.class);
+                        callback.onCallback(user);
                     } else {
                         callback.onCallback(null);
                     }
+                } else {
+                    callback.onCallback(null);
                 }
             });
         } catch (Exception e) {
