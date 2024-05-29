@@ -1,6 +1,5 @@
 package nerd.example.inha_project.account.register;
 
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
@@ -20,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import nerd.example.inha_project.R;
-import nerd.example.inha_project.account.LoginActivity;
 import nerd.example.inha_project.util.Util;
 
 public class TermsFragment extends Fragment {
