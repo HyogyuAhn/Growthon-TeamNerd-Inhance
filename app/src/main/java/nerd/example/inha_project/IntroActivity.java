@@ -1,6 +1,5 @@
 package nerd.example.inha_project;
 
-import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,11 +9,11 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
+import android.view.ViewTreeObserver;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -27,6 +26,7 @@ public class IntroActivity extends AppCompatActivity {
     private static final String INTRO_TEXT = "INHA+nce";
     private TextView textIntro;
     private int index = 0;
+    private int originalTopMargin;
     private Handler handler = new Handler();
 
     @Override
@@ -41,6 +41,15 @@ public class IntroActivity extends AppCompatActivity {
         });
 
         textIntro = (TextView) findViewById(R.id.intro_logo);
+
+        textIntro.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) textIntro.getLayoutParams();
+                originalTopMargin = params.topMargin;
+                textIntro.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+            }
+        });
 
         handler.postDelayed(textAdder, 200);
     }
@@ -67,30 +76,33 @@ public class IntroActivity extends AppCompatActivity {
     private Runnable changeText = new Runnable() {
         @Override
         public void run() {
-            SpannableString spannableString = new SpannableString(INTRO_TEXT);
-
-            String changeText = "A+";
-            int start = INTRO_TEXT.indexOf(changeText);
-            int end = start + changeText.length();
-
-            spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#4285F4")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            spannableString.setSpan(new RelativeSizeSpan(1.2f), start, end, SpannableString.SPAN_EXCLUSIVE_EXCLUSIVE);
-
-            textIntro.setText(spannableString);
-
-            textIntro.post(new Runnable() {
-                @Override
-                public void run() {
-                    RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) textIntro.getLayoutParams();
-                    params.topMargin -= dpToPx(21);
-                    textIntro.setLayoutParams(params);
-                }
-            });
-
+            sizeUpAnimation();
 
             handler.postDelayed(startNextActivity, 2500);
         }
     };
+
+    private void sizeUpAnimation() {
+        final String changeText = "A+";
+        final int start = INTRO_TEXT.indexOf(changeText);
+        final int end = start + changeText.length();
+
+        ValueAnimator sizeAnimator = ValueAnimator.ofFloat(1.0f, 1.2f);
+        sizeAnimator.setDuration(1000);
+        sizeAnimator.addUpdateListener(animator -> {
+            float animatedValue = (float) animator.getAnimatedValue();
+            SpannableString spannableString = new SpannableString(INTRO_TEXT);
+            spannableString.setSpan(new ForegroundColorSpan(Color.parseColor("#4285F4")), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            spannableString.setSpan(new RelativeSizeSpan(animatedValue), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            textIntro.setText(spannableString);
+
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) textIntro.getLayoutParams();
+            params.topMargin = originalTopMargin - (int) ((animatedValue - 1.0f) * textIntro.getTextSize() / 2);
+            textIntro.setLayoutParams(params);
+        });
+        sizeAnimator.start();
+
+    }
 
     private final Runnable startNextActivity = new Runnable() {
         @Override
