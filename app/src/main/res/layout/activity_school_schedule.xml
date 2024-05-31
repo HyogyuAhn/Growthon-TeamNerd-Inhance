@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".others.SchoolScheduleActivity"
+    android:background="#CDe6EA">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="top"
+        android:src="@drawable/rectangle_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="학사일정"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="back_arrow"
+        android:src="@drawable/arrow_white_left" />
+
+    <TextView
+        android:id="@+id/schedule_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nerd님!"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/schedule_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘 5월 31일부터는\n인하대에 이런 일정이 있어요!"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="140dp"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:id="@+id/schedule_date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="05.31~06.13"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="255dp"
+        android:layout_marginStart="40dp" />
+
+
+    <RelativeLayout
+        android:layout_width="340dp"
+        android:layout_height="230dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/announce_board">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="[학부-교외장학] 2024년도 1학기 강화군 장학생 선발 안내\n\n[인재개발팀] 미국 UMS 해외현장실습 장학생 추가 모집\n\n[인재개발팀] 추천채용 기업 설명회_(주)경신홀딩스,\n(주)경신전선, (주)경신\n\n[산단경영관리팀] 산학협력단 사무원(육아휴직대체인력)\n체용 공고\n\n[인하특강-CEO와 기업가 정신] 홍정표 한화생명 부사장\n초청 강연 안내"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -16,10 +16,13 @@ import android.widget.TextView;
 import java.util.List;
 
 import nerd.example.inha_project.R;
+import nerd.example.inha_project.StudyBoardActivity;
 import nerd.example.inha_project.account.LoginActivity;
 import nerd.example.inha_project.account.User;
 import nerd.example.inha_project.database.AccountManager;
 import nerd.example.inha_project.database.callback.DBCallback;
+import nerd.example.inha_project.others.AnnounceActivity;
+import nerd.example.inha_project.others.SchoolScheduleActivity;
 import nerd.example.inha_project.util.DateUtil;
 
 public class HomeFragment extends Fragment {
@@ -66,6 +69,24 @@ public class HomeFragment extends Fragment {
             dayViews[i].setText(weekDays.get(i));
             dateViews[i].setText(weekDates.get(i));
         }
+
+        ImageView announce = view.findViewById(R.id.home_btn_announce);
+        announce.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), AnnounceActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView schoolSchedule = view.findViewById(R.id.home_school_schedule_image);
+        schoolSchedule.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), SchoolScheduleActivity.class);
+            startActivity(intent);
+        });
+
+        ImageView study = view.findViewById(R.id.home_study_image);
+        study.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), StudyBoardActivity.class);
+            startActivity(intent);
+        });
 
         return view;
     }

@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#CDE6EA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudyBoardActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="top"
+        android:src="@drawable/rectangle_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/StudyBoard_TopName"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="back_arrow"
+        android:src="@drawable/arrow_white_left" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/profile_image"
+        android:contentDescription="profile_image"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/NickName"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/Nickname"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="91dp"
+        android:layout_marginStart="153dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/Current_Message"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/Personal_Info"
+        android:textSize="14sp"
+        android:textColor="#2B2E32"
+        android:layout_marginTop="121dp"
+        android:layout_marginStart="153dp" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="103dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/Total"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="192dp" />
+
+    <TextView
+        android:id="@+id/Language"
+        android:layout_width="103dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/Language"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="192dp"
+        android:layout_marginStart="103dp"/>
+
+    <TextView
+        android:id="@+id/Programming"
+        android:layout_width="103dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/Programming"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="192dp"
+        android:layout_marginStart="206dp"/>
+
+    <TextView
+        android:id="@+id/Free"
+        android:layout_width="103dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/Free"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="192dp"
+        android:layout_marginStart="309dp"/>
+
+    <View
+        android:id="@+id/Bar"
+        android:layout_width="103dp"
+        android:layout_height="4dp"
+        android:background="#3D4690"
+        android:layout_marginTop="220dp" />
+
+    <ImageView
+        android:contentDescription="search"
+        android:layout_width="400dp"
+        android:layout_height="42dp"
+        android:src="@drawable/click_rectangle_blue"
+        android:layout_marginTop="240dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:contentDescription="search_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/search"
+        android:layout_marginTop="248dp"
+        android:layout_marginStart="36dp" />
+
+    <TextView
+        android:id="@+id/Search_Blank"
+        android:layout_width="330dp"
+        android:layout_height="42dp"
+        android:gravity="center_vertical"
+        android:text="@string/Search_Explain"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:layout_marginTop="239dp"
+        android:layout_marginStart="69dp" />
+
+    <ImageView
+        android:id="@+id/First_Post"
+        android:contentDescription="blank_white"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:src="@drawable/study_blank_white"
+        android:layout_marginTop="305dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="#2b2e32"
+        android:textSize="14sp"
+        android:layout_marginTop="315dp"
+        android:layout_marginStart="42dp"
+        android:text="@string/Title1" />
+
+    <ImageView
+        android:contentDescription="register"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_blue_registration"
+        android:layout_marginTop="295dp"
+        android:layout_marginStart="37dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Study_Current_Condition"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="284dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="category"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_grey_category"
+        android:layout_marginTop="295dp"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Free"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="284dp"
+        android:layout_marginStart="120dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textColor="#7F7F7F"
+        android:text="5/16"
+        android:textSize="10sp"
+        android:layout_marginTop="334dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="77dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="28"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="335dp"
+        android:layout_marginStart="88dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="343dp"
+        android:layout_marginStart="115dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="335dp"
+        android:layout_marginStart="123dp" />
+
+    <ImageView
+        android:id="@+id/Second_Post"
+        android:contentDescription="blank_white"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:src="@drawable/study_blank_white"
+        android:layout_marginTop="377dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="#2b2e32"
+        android:textSize="14sp"
+        android:layout_marginTop="388dp"
+        android:layout_marginStart="42dp"
+        android:text="@string/Title2" />
+
+    <ImageView
+        android:contentDescription="register"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_blue_registration"
+        android:layout_marginTop="368dp"
+        android:layout_marginStart="37dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Study_Current_Condition"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="357dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="category"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_grey_category"
+        android:layout_marginTop="368dp"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Language"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="357dp"
+        android:layout_marginStart="120dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textColor="#7F7F7F"
+        android:text="5/15"
+        android:textSize="10sp"
+        android:layout_marginTop="406dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="412dp"
+        android:layout_marginStart="77dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="13"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="407dp"
+        android:layout_marginStart="88dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="415dp"
+        android:layout_marginStart="115dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="407dp"
+        android:layout_marginStart="123dp" />
+
+    <ImageView
+        android:id="@+id/Third_Post"
+        android:contentDescription="blank_white"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:src="@drawable/study_blank_white"
+        android:layout_marginTop="449dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="#2b2e32"
+        android:textSize="14sp"
+        android:layout_marginTop="460dp"
+        android:layout_marginStart="42dp"
+        android:text="@string/Title3" />
+
+    <ImageView
+        android:contentDescription="register"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_blue_registration"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="37dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Study_Current_Condition"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="429dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="category"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_grey_category"
+        android:layout_marginTop="440dp"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Programming"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="429dp"
+        android:layout_marginStart="120dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textColor="#7F7F7F"
+        android:text="5/15"
+        android:textSize="10sp"
+        android:layout_marginTop="478dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="484dp"
+        android:layout_marginStart="77dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="47"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="479dp"
+        android:layout_marginStart="88dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="487dp"
+        android:layout_marginStart="115dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="22"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="479dp"
+        android:layout_marginStart="123dp" />
+
+    <ImageView
+        android:id="@+id/Forth_Post"
+        android:contentDescription="blank_white"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:src="@drawable/study_blank_white"
+        android:layout_marginTop="519dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="#2b2e32"
+        android:textSize="14sp"
+        android:layout_marginTop="530dp"
+        android:layout_marginStart="42dp"
+        android:text="@string/Title4" />
+
+    <ImageView
+        android:contentDescription="register"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_blue_registration"
+        android:layout_marginTop="510dp"
+        android:layout_marginStart="37dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Study_Current_Condition"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="499dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="category"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_grey_category"
+        android:layout_marginTop="510dp"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Free"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="499dp"
+        android:layout_marginStart="120dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textColor="#7F7F7F"
+        android:text="5/15"
+        android:textSize="10sp"
+        android:layout_marginTop="548dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="554dp"
+        android:layout_marginStart="77dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="30"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="549dp"
+        android:layout_marginStart="88dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="557dp"
+        android:layout_marginStart="115dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="549dp"
+        android:layout_marginStart="123dp" />
+
+    <ImageView
+        android:id="@+id/Fifth_Post"
+        android:contentDescription="blank_white"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:src="@drawable/study_blank_white"
+        android:layout_marginTop="589dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="#2b2e32"
+        android:textSize="14sp"
+        android:layout_marginTop="600dp"
+        android:layout_marginStart="42dp"
+        android:text="@string/Title5" />
+
+    <ImageView
+        android:contentDescription="register"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_blue_registration"
+        android:layout_marginTop="580dp"
+        android:layout_marginStart="37dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Study_Current_Condition"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="569dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="category"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_grey_category"
+        android:layout_marginTop="580dp"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Free"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="569dp"
+        android:layout_marginStart="120dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textColor="#7F7F7F"
+        android:text="5/14"
+        android:textSize="10sp"
+        android:layout_marginTop="618dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="624dp"
+        android:layout_marginStart="77dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="11"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="619dp"
+        android:layout_marginStart="88dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="627dp"
+        android:layout_marginStart="115dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="17"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="619dp"
+        android:layout_marginStart="123dp" />
+
+    <ImageView
+        android:id="@+id/Sixed_Post"
+        android:contentDescription="blank_white"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:src="@drawable/study_blank_white"
+        android:layout_marginTop="659dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="#2b2e32"
+        android:textSize="14sp"
+        android:layout_marginTop="670dp"
+        android:layout_marginStart="42dp"
+        android:text="@string/Title6" />
+
+    <ImageView
+        android:contentDescription="register"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_blue_registration"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="37dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Study_Current_Condition"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="639dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="category"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:src="@drawable/study_grey_category"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="42dp"
+        android:gravity="center"
+        android:text="@string/Programming"
+        android:textColor="#ffffff"
+        android:textSize="10sp"
+        android:layout_marginTop="639dp"
+        android:layout_marginStart="120dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:textColor="#7F7F7F"
+        android:text="5/14"
+        android:textSize="10sp"
+        android:layout_marginTop="688dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="694dp"
+        android:layout_marginStart="77dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="29"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="689dp"
+        android:layout_marginStart="88dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="697dp"
+        android:layout_marginStart="115dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="32"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="689dp"
+        android:layout_marginStart="123dp" />
+
+</RelativeLayout>

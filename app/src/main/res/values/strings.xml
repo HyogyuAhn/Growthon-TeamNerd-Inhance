@@ -127,4 +127,21 @@
     <string name="Service">서비스 이용 약관</string>
     <string name="Personal_Info_System">개인 정보 처리 설정</string>
 
+    <string name="Field">분야</string>
+    <string name="People">인원</string>
+    <string name="MathText">일반수학1 주에 1번 이상 요일 딱 정해서 공부하실 분구해요!
+학과 상관 없지만 이번학기 일반수학 1 들으시고
+수학 기초는 숙지하시고 계신분이면 좋겠어요!
+(+책임감 있는 사람들이면 좋겠습니다.🥲)</string>
+    <string name="Name1">안효규</string>
+    <string name="Name2">우연정</string>
+    <string name="Name1_Info">인공지능공학과 24학번 재학생</string>
+    <string name="Name2_Info">디자인테크놀로지학과 24학번 우연정</string>
+    <string name="Name1_Reply">저 하고싶어요!</string>
+    <string name="Name1_Author_Reply">채팅 보내주세요~</string>
+    <string name="Name2_Reply">재수강도 받아주시나요..</string>
+    <string name="Name2_Author_reply">앗.. 당연하죠 같이 열심히 해봐요~ 채팅 주세요!</string>
+    <string name="Name2_Author_Name2_rereply">감사합니다!!</string>
+
+
 </resources>

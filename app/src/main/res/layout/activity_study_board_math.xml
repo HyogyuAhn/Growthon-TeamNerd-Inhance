@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#CDE6EA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudyBoardMathActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="top"
+        android:src="@drawable/rectangle_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/StudyBoard_TopName"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="back_arrow"
+        android:src="@drawable/arrow_white_left" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_profile1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/profile_image"
+        android:contentDescription="profile_image"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="@string/Nickname"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#2b2e32"
+        android:layout_marginTop="82dp"
+        android:layout_marginStart="95dp" />
+
+    <TextView
+        android:id="@+id/Personal_Info"
+        android:layout_width="250dp"
+        android:layout_height="20dp"
+        android:text="@string/Personal_Info"
+        android:textSize="16sp"
+        android:textColor="#2b2e32"
+        android:layout_marginTop="102dp"
+        android:layout_marginStart="95dp" />
+
+    <ImageView
+        android:contentDescription="textbox"
+        android:layout_width="385dp"
+        android:layout_height="202dp"
+        android:src="@drawable/study_rectangle_white"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textColor="#000000"
+        android:text="@string/Title1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="29dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="5/16"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="185dp"
+        android:layout_marginStart="29dp" />
+
+    <ImageView
+        android:contentDescription="eye"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/eye"
+        android:layout_marginTop="191dp"
+        android:layout_marginStart="65dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="28"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="185dp"
+        android:layout_marginStart="77dp" />
+
+    <ImageView
+        android:contentDescription="reply"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:src="@drawable/reply"
+        android:layout_marginTop="193dp"
+        android:layout_marginStart="111dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp"
+        android:layout_marginTop="185dp"
+        android:layout_marginStart="121dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/Field"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:layout_marginTop="208dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/Free"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:layout_marginTop="208dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="@string/People"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:layout_marginTop="228dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:text="5~6명"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:layout_marginTop="228dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="85dp"
+        android:gravity="center_vertical"
+        android:text="@string/MathText"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:layout_marginTop="253dp"
+        android:layout_marginStart="30dp" />
+
+    <ImageView
+        android:contentDescription="reply_box"
+        android:layout_width="385dp"
+        android:layout_height="78dp"
+        android:src="@drawable/study_reply_rectangle_white"
+        android:layout_marginTop="360dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:contentDescription="name1_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/annyong"
+        android:layout_marginTop="365dp"
+        android:layout_marginStart="21dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:text="@string/Name1"
+        android:layout_marginTop="363dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name1_Info"
+        android:textSize="11sp"
+        android:layout_marginTop="377dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name1_Reply"
+        android:textSize="12sp"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="22dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="413dp"
+        android:gravity="center_vertical"
+        android:text="5/16 13:36"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:contentDescription="reply_arrow"
+        android:layout_width="12dp"
+        android:layout_height="15dp"
+        android:src="@drawable/reply_arrow"
+        android:layout_marginTop="445dp"
+        android:layout_marginStart="21dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_profile2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="444dp"
+        android:src="@drawable/profile_image"
+        android:contentDescription="profile_image"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Nickname"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginTop="449dp"
+        android:layout_marginStart="70dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name1_Author_Reply"
+        android:textSize="12sp"
+        android:layout_marginTop="474dp"
+        android:layout_marginStart="38dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="487dp"
+        android:gravity="center_vertical"
+        android:text="5/16 13:39"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:contentDescription="reply_box"
+        android:layout_width="385dp"
+        android:layout_height="78dp"
+        android:src="@drawable/study_reply_rectangle_white"
+        android:layout_marginTop="512dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:contentDescription="name2_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/induck"
+        android:layout_marginTop="518dp"
+        android:layout_marginStart="21dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:text="@string/Name2"
+        android:layout_marginTop="518dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name2_Info"
+        android:textSize="11sp"
+        android:layout_marginTop="532dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name2_Reply"
+        android:textSize="12sp"
+        android:layout_marginTop="552dp"
+        android:layout_marginStart="22dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="565dp"
+        android:gravity="center_vertical"
+        android:text="5/16 19:14"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:contentDescription="reply_arrow"
+        android:layout_width="12dp"
+        android:layout_height="15dp"
+        android:src="@drawable/reply_arrow"
+        android:layout_marginTop="599dp"
+        android:layout_marginStart="21dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_profile3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="596dp"
+        android:src="@drawable/profile_image"
+        android:contentDescription="profile_image"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Nickname"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginTop="601dp"
+        android:layout_marginStart="70dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name2_Author_reply"
+        android:textSize="12sp"
+        android:layout_marginTop="626dp"
+        android:layout_marginStart="38dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="638dp"
+        android:gravity="center_vertical"
+        android:text="5/16 20:08"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:contentDescription="reply_arrow"
+        android:layout_width="12dp"
+        android:layout_height="15dp"
+        android:src="@drawable/reply_arrow"
+        android:layout_marginTop="663dp"
+        android:layout_marginStart="42dp" />
+
+    <ImageView
+        android:contentDescription="name2_profile"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/induck"
+        android:layout_marginTop="660dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:text="@string/Name2"
+        android:layout_marginTop="667dp"
+        android:layout_marginStart="97dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/Name2_Author_Name2_rereply"
+        android:textSize="12sp"
+        android:layout_marginTop="689dp"
+        android:layout_marginStart="60dp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="703dp"
+        android:gravity="center_vertical"
+        android:text="5/16 20:39"
+        android:textColor="#7F7F7F"
+        android:textSize="10sp" />
+
+</RelativeLayout>
