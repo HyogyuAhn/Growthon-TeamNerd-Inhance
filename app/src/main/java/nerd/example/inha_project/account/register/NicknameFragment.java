@@ -125,12 +125,9 @@ public class NicknameFragment extends Fragment {
 
         });
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RegisterFragmentManager.user.setPassword(null);
-                getActivity().onBackPressed();
-            }
+        back.setOnClickListener(v -> {
+            RegisterFragmentManager.user.setPassword(null);
+            getActivity().onBackPressed();
         });
 
         return view;

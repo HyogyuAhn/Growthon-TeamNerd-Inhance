@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "948687650840",
+    "project_id": "inhance-8db54",
+    "storage_bucket": "inhance-8db54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948687650840:android:087aa327b72a9d54b7436d",
+        "android_client_info": {
+          "package_name": "nerd.example.inha_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmdLPAIlOYkvF3TU1csa_pgtapqdMcM9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

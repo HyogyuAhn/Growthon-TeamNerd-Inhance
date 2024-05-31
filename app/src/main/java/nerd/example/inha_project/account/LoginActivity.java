@@ -13,13 +13,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import nerd.example.inha_project.MainActivity;
+import nerd.example.inha_project.database.callback.DBCallback;
+import nerd.example.inha_project.home.HomeFragmentManager;
 import nerd.example.inha_project.R;
 import nerd.example.inha_project.account.register.RegisterFragmentManager;
 import nerd.example.inha_project.database.AccountManager;
 import nerd.example.inha_project.database.callback.LoginCallback;
 
 public class LoginActivity extends AppCompatActivity {
+
+    public static User loginInstance = new User();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +50,18 @@ public class LoginActivity extends AppCompatActivity {
                 else if (pw.getText().toString().isEmpty()) error.setText("비밀번호를 입력해 주세요.");
                 else if (id.getText().toString().length() != 8) error.setText("학번은 8자리로 입력해 주세요.");
                 else {
+                    loginInstance.setID(id.getText().toString());
                     AccountManager.loginRequest(id.getText().toString(), pw.getText().toString(), new LoginCallback() {
                         @Override
                         public void onLoginResult(boolean success) {
                             if (success) {
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                AccountManager.getAccountData(id.getText().toString(), new DBCallback() {
+                                    @Override
+                                    public void onCallback(User user) {
+                                        loginInstance = user;
+                                    }
+                                });
+                                Intent intent = new Intent(getApplicationContext(), HomeFragmentManager.class);
                                 startActivity(intent);
                                 finish();
                             } else {

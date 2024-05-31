@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/home_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_none_image"
+            android:contentDescription="@string/profile_image_description"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            />
+
+        <TextView
+            android:id="@+id/home_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="{name}님"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="55dp" />
+
+        <TextView
+            android:id="@+id/home_status"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="{Status_Message}"
+            android:textSize="12sp"
+            android:letterSpacing="-0.02"
+            android:textColor="#767878"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="55dp"/>
+
+        <View
+            android:id="@+id/home_right_arrow"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/right_arrow"
+            android:layout_toEndOf="@id/home_name"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/register_grayline"
+            android:layout_alignParentBottom="true"/>
+
+        <View
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/announce_rectangle" />
+
+        <ImageView
+            android:id="@+id/home_btn_announce"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14.5dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/bell_image"
+            android:contentDescription="@string/home_description" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:layout_below="@id/top_bar">
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/home_board_main"
+            android:layout_centerHorizontal="true"/>
+
+        <View
+            android:layout_width="330dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/home_subboard_main"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:layout_width="330dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
+            
+            <TextView
+                android:id="@+id/home_day1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/home_day2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/home_day1"/>
+
+            <TextView
+                android:id="@+id/home_day3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/home_day2"/>
+
+            <TextView
+                android:id="@+id/home_day4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/home_day3"/>
+
+            <TextView
+                android:id="@+id/home_day5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/home_day4"/>
+
+            <TextView
+                android:id="@+id/home_day6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/home_day5"/>
+
+            <TextView
+                android:id="@+id/home_day7"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:layout_toEndOf="@id/home_day6"/>
+
+
+            <TextView
+                android:id="@+id/home_date1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day1"/>
+
+            <TextView
+                android:id="@+id/home_date2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="19dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day2"
+                android:layout_toEndOf="@id/home_date1"/>
+
+            <TextView
+                android:id="@+id/home_date3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="21dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day3"
+                android:layout_toEndOf="@id/home_date2"/>
+
+            <TextView
+                android:id="@+id/home_date4"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="19.5dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day4"
+                android:layout_toEndOf="@id/home_date3"/>
+
+            <TextView
+                android:id="@+id/home_date5"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20.5dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day5"
+                android:layout_toEndOf="@id/home_date4"/>
+
+            <TextView
+                android:id="@+id/home_date6"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20.5dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day6"
+                android:layout_toEndOf="@id/home_date5"/>
+
+            <TextView
+                android:id="@+id/home_date7"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20.5dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_below="@id/home_day7"
+                android:layout_toEndOf="@id/home_date6"/>
+            
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_selector"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/home_content" >
+        
+        <ImageView
+            android:layout_width="189dp"
+            android:layout_height="40dp"
+            android:src="@drawable/login_logo"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="11dp"
+            android:contentDescription="@string/home_description" />
+        
+        <RelativeLayout
+            android:id="@+id/menu_first"
+            android:layout_width="320dp"
+            android:layout_height="105dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp">
+
+            <RelativeLayout
+                android:id="@+id/home_todo_layout"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/home_skyblue_rectangle"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_todo_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/home_todo"
+                    android:contentDescription="@string/home_description" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_todayfood_layout"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/home_blue_rectangle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_todayfood_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/home_todayfood"
+                    android:contentDescription="@string/home_description" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_school_schedule_layout"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/home_skyblue_rectangle"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_school_schedule_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/home_school_schedule"
+                    android:contentDescription="@string/home_description" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/home_todo_layout"
+                android:layout_marginTop="3dp"
+                android:text="@string/text_todo"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/home_todayfood_layout"
+                android:layout_marginTop="3dp"
+                android:text="@string/text_todayfood"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/home_school_schedule_layout"
+                android:layout_marginTop="3dp"
+                android:text="@string/text_school_schedule"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_alignParentEnd="true"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="105dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/menu_first">
+
+            <RelativeLayout
+                android:id="@+id/home_study_layout"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/home_blue_rectangle"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_study_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/home_study"
+                    android:contentDescription="@string/home_description" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_grade_caculator_layout"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/home_skyblue_rectangle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/home_grade_caculator_image"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/home_caculator"
+                    android:contentDescription="@string/home_description" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/home_blue_rectangle"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:text="@string/text_soon"
+                    android:textSize="12sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/home_study_layout"
+                android:layout_marginTop="3dp"
+                android:text="@string/text_study"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/home_grade_caculator_layout"
+                android:layout_marginTop="3dp"
+                android:text="@string/text_grade_caculator"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

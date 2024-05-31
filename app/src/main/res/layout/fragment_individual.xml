@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CDE6EA">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="top"
+        android:src="@drawable/rectangle_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/MyInfo_TopName"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:id="@+id/Personal_Info"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="#3D4690"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Personal_Info"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_profile"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/profile_image"
+        android:contentDescription="profile_image"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/NickName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="340dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/Current_Message"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_marginTop="380dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/Profile_Edit_Button"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:src="@drawable/profile_edit_box_blue"
+        android:contentDescription="profile_edit"
+        android:layout_marginTop="425dp"
+        android:layout_marginStart="260dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/profile_edit"
+        android:textColor="#ffffff"
+        android:layout_marginTop="425dp"
+        android:layout_marginStart="260dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/dotted_line"
+        android:contentDescription="dotted_line"
+        android:layout_marginTop="480dp"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/Password_Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/PasswordChange"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="498dp"
+        android:layout_marginStart="40dp" />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/play"
+        android:contentDescription="play"
+        android:layout_marginTop="518dp"
+        android:layout_marginStart="205dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/Logout_Button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Logout"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="545dp"
+        android:layout_marginStart="40dp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/power"
+        android:contentDescription="logout"
+        android:layout_marginTop="565dp"
+        android:layout_marginStart="112dp"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/Out"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Out"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginTop="592dp"
+        android:layout_marginStart="40dp" />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/out"
+        android:contentDescription="out"
+        android:layout_marginTop="610dp"
+        android:layout_marginStart="118dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

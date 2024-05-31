@@ -49,9 +49,82 @@
     <string name="name_hint">닉네임 입력</string>
     <string name="name_btn_next">다음</string>
 
-
     <!-- Register : Complete Fragment XML String -->
     <string name="regcom_info">LOGO 회원가입이\n완료되었습니다.</string>
 
+    <!-- Main Activity XML String -->
+    <string name="profile_image_description">프로필 이미지</string>
+
+    <!-- Home Nav XML String -->
+    <string name="nav_home">홈</string>
+    <string name="nav_exam_plan">시험계획</string>
+    <string name="nav_individual">개인</string>
+    <string name="nav_aichat">AI</string>
+    <string name="nav_setting">설정</string>
+
+    <string name="text_todo">To-do</string>
+    <string name="text_todayfood">오늘의 밥</string>
+    <string name="text_school_schedule">학사일정</string>
+    <string name="text_study">스터디</string>
+    <string name="text_grade_caculator">성적계산기</string>
+    <string name="text_soon">comming\nsoon</string>
+
+    <string name="home_description">홈 이미지</string>
+
+    <!-- Sohyun Part XML String -->
+    <string name="MyInfo_TopName">내 정보</string>
+    <string name="Personal_Info">인하대학교 재학생</string>
+    <string name="Nickname">Nerd</string>
+    <string name="CurrentMessage">나 Nerd인데 우리 팀이 최고야!</string>
+    <string name="profile_edit">프로필 수정</string>
+    <string name="PasswordChange">비밀번호 변경 및 찾기</string>
+    <string name="Logout">로그아웃</string>
+    <string name="Out">회원 탈퇴</string>
+
+    <string name="ProfileChange_TopName">프로필 변경</string>
+    <string name="ProfileChange_Explain1">프로필과 상태 메시지를 통해</string>
+    <string name="ProfileChange_Explain2">Nerd님을 자유롭게 표현해주세요!</string>
+    <string name="NickNameChange_Explain1">*닉네임을 설정하면</string>
+    <string name="NickNameChange_Explain2">30일간 변경할 수 없습니다*</string>
+    <string name="CurrentMessage_ExplainBefore">현재 상태 메세지</string>
+    <string name="CurrentMessage_Explain1After">상태 메세지 변경</string>
+    <string name="CurrentMessage_Explain2After">변경할 상태 메세지를 입력해주세요.</string>
+    <string name="CurrentMessage_AfterButton">상태 메세지 변경</string>
+
+    <string name="StudyBoard_TopName">스터디 게시판</string>
+    <string name="Total">전체</string>
+    <string name="Language">어학</string>
+    <string name="Programming">프로그래밍</string>
+    <string name="Free">자율</string>
+    <string name="Search_Explain">찾으시는 스터디가 있으신가요?</string>
+    <string name="Study_Current_Condition">모집중</string>
+    <string name="Title1">일수 스터디하실 분 모집합니다!</string>
+    <string name="Title2">토익 공부하실 분 모집합니다!!</string>
+    <string name="Title3">소융대생이랑 C언어 공부할 사람~</string>
+    <string name="Title4">선형대수 망한 것 같은 사람...? 같이 공부해요..</string>
+    <string name="Title5">객프 스터디원 구함</string>
+    <string name="Title6">JAVA 같이 공부할 성실한 청년들??</string>
+
+    <string name="System_Setting">설정</string>
+    <string name="Alarm_Setting">알림 설정</string>
+    <string name="PushAlarm_Setting">푸쉬 알림</string>
+    <string name="PushAlarm_Explain1">INH</string>
+    <string name="PushAlarm_Explain2">A+</string>
+    <string name="PushAlarm_Explain3">nce</string>
+    <string name="PushAlarm_Explain4">앱의 다양한 알림을 푸시로 받을 수 있습니다.</string>
+    <string name="TimeTable">시간표</string>
+    <string name="School_Schedule">학사 일정</string>
+    <string name="Food">오늘의 밥</string>
+    <string name="Theme">테마 설정</string>
+    <string name="Dark_Mode">다크 모드</string>
+    <string name="Account_Setting">계정 설정</string>
+    <string name="Account_Info">내 가입 정보</string>
+    <string name="Account_Info_Detail">Nerd1234@inha.edu</string>
+    <string name="Account_Info_Setting">계정 정보 설정</string>
+    <string name="Help">도움</string>
+    <string name="Version">버전 정보</string>
+    <string name="Version_Detail">현재 1.24.5 / 최신 1.24.5</string>
+    <string name="Service">서비스 이용 약관</string>
+    <string name="Personal_Info_System">개인 정보 처리 설정</string>
 
 </resources>

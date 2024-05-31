@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_exam_plan"
+        android:icon="@drawable/exam_plan_image"
+        android:title="@string/nav_exam_plan" />
+    <item
+        android:id="@+id/navigation_individual"
+        android:icon="@drawable/individual_image"
+        android:title="@string/nav_individual" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home_image"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/navigation_aichat"
+        android:icon="@drawable/aichat_image"
+        android:title="@string/nav_aichat" />
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting_image"
+        android:title="@string/nav_setting" />
+
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="nerd.example.inha_project.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_exam_plan"
+        android:name="nerd.example.inha_project.home.ExamPlanFragment"
+        android:label="@string/nav_exam_plan"
+        tools:layout="@layout/fragment_individual" />
+
+    <fragment
+        android:id="@+id/navigation_individual"
+        android:name="nerd.example.inha_project.home.IndividualFragment"
+        android:label="@string/nav_individual"
+        tools:layout="@layout/fragment_individual" />
+
+    <fragment
+        android:id="@+id/navigation_aichat"
+        android:name="nerd.example.inha_project.home.AIChatFragment"
+        android:label="@string/nav_aichat"
+        tools:layout="@layout/fragment_aichat" />
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="nerd.example.inha_project.home.SettingFragment"
+        android:label="@string/nav_setting"
+        tools:layout="@layout/fragment_setting" />
+
+</navigation>
