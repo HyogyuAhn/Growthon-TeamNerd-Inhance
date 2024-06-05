@@ -54,6 +54,8 @@
 
     <!-- Main Activity XML String -->
     <string name="profile_image_description">프로필 이미지</string>
+    <string name="home_name">{name}님</string>
+    <string name="home_status_message">{status message}</string>
 
     <!-- Home Nav XML String -->
     <string name="nav_home">홈</string>
