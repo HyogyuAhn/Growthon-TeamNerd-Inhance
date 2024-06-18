@@ -87,15 +87,15 @@
             android:layout_height="200dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/home_subboard_main"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true" />
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/todo_recycler_view"
             android:layout_width="320dp"
             android:layout_height="200dp"
-            android:src="@drawable/todoimage"
             android:layout_marginTop="100dp"
-            android:layout_centerHorizontal="true"
-            />
+            android:padding="6dp"
+            android:layout_centerHorizontal="true"/>
 
         <RelativeLayout
             android:layout_width="330dp"

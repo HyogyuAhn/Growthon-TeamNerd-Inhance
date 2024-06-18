@@ -16,10 +16,10 @@
             android:name=".others.TodoListActivity"
             android:exported="false" />
         <activity
-            android:name=".StudyBoardMathActivity"
+            android:name=".others.StudyBoardMathActivity"
             android:exported="false" />
         <activity
-            android:name=".StudyBoardActivity"
+            android:name=".others.StudyBoardActivity"
             android:exported="false" />
         <activity
             android:name=".others.SchoolScheduleActivity"
@@ -32,7 +32,8 @@
             android:exported="false" />
         <activity
             android:name=".home.HomeFragmentManager"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".account.register.RegisterCompleteActivity"
             android:exported="false" />

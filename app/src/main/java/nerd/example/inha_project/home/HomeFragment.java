@@ -3,33 +3,48 @@ package nerd.example.inha_project.home;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.firestore.DocumentSnapshot;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import nerd.example.inha_project.R;
-import nerd.example.inha_project.StudyBoardActivity;
+import nerd.example.inha_project.database.TodolistManager;
+import nerd.example.inha_project.others.StudyBoardActivity;
 import nerd.example.inha_project.account.LoginActivity;
 import nerd.example.inha_project.account.User;
 import nerd.example.inha_project.database.AccountManager;
 import nerd.example.inha_project.database.callback.DBCallback;
 import nerd.example.inha_project.others.AnnounceActivity;
 import nerd.example.inha_project.others.SchoolScheduleActivity;
+import nerd.example.inha_project.others.TodoListActivity;
 import nerd.example.inha_project.util.DateUtil;
+import nerd.example.inha_project.util.todo.TodoItem;
+import nerd.example.inha_project.util.todo.TodoListAdapter;
 
 public class HomeFragment extends Fragment {
+
+    private TodolistManager todolistManager;
+    private TodoListAdapter adapter;
+    private List<TodoItem> todoList = new ArrayList<>();
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
 
         TextView nickname = view.findViewById(R.id.home_name);
         TextView status = view.findViewById(R.id.home_status);
@@ -54,6 +69,16 @@ public class HomeFragment extends Fragment {
                 view.findViewById(R.id.home_date7)
         };
 
+        RecyclerView recyclerView = view.findViewById(R.id.todo_recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        todolistManager = new TodolistManager(LoginActivity.loginInstance.getID());
+
+        adapter = new TodoListAdapter(todoList);
+        recyclerView.setAdapter(adapter);
+
+        loadTopTodoList();
+
         AccountManager.getAccountData(LoginActivity.loginInstance.getID(), new DBCallback() {
             @Override
             public void onCallback(User user) {
@@ -76,6 +101,12 @@ public class HomeFragment extends Fragment {
             startActivity(intent);
         });
 
+        ImageView todo = view.findViewById(R.id.home_todo_image);
+        todo.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), TodoListActivity.class);
+            startActivity(intent);
+        });
+
         ImageView schoolSchedule = view.findViewById(R.id.home_school_schedule_image);
         schoolSchedule.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity().getApplicationContext(), SchoolScheduleActivity.class);
@@ -89,5 +120,27 @@ public class HomeFragment extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        loadTopTodoList();
+    }
+
+    private void loadTopTodoList() {
+        todolistManager.getTopTodoList(2).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                todoList.clear();
+                for (DocumentSnapshot document : task.getResult()) {
+                    TodoItem todoItem = document.toObject(TodoItem.class);
+                    if (todoItem != null) {
+                        todoItem.setId(document.getId());
+                        todoList.add(todoItem);
+                    }
+                }
+                adapter.notifyDataSetChanged();
+            }
+        });
     }
 }

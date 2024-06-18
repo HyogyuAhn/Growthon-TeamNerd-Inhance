@@ -40,4 +40,10 @@ public class DateUtil {
         return weekDays;
     }
 
+    public static String getToday() {
+        Calendar calendar = Calendar.getInstance();
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyyMMdd");
+        return dateFormatter.format(calendar.getTime());
+    }
+
 }

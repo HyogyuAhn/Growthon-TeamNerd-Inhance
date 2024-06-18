@@ -1,15 +1,18 @@
 package nerd.example.inha_project.home;
 
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.WindowInsets;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -51,6 +54,9 @@ public class AIChatFragment extends Fragment {
             }
         }
 
+        final View rootView = view.getRootView();
+        final LinearLayout inputLayout = view.findViewById(R.id.inputbox);
+
         recyclerView = view.findViewById(R.id.recyclerView);
         btnSend = view.findViewById(R.id.btn_send);
         etMsg = view.findViewById(R.id.et_msg);
@@ -59,6 +65,19 @@ public class AIChatFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         adp = new ChatMsgAdapter();
         recyclerView.setAdapter(adp);
+
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
+            Rect r = new Rect();
+            rootView.getWindowVisibleDisplayFrame(r);
+            int screenHeight = rootView.getHeight();
+            int keypadHeight = screenHeight - r.bottom;
+
+            if (keypadHeight > screenHeight * 0.15) {
+                rootView.setPadding(0, 0, 0, keypadHeight);
+            } else {
+                rootView.setPadding(0, 0, 0, 0);
+            }
+        });
 
         btnSend.setOnClickListener(v -> {
             String msg = etMsg.getText().toString();

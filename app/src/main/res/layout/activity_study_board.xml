@@ -6,7 +6,7 @@
     android:background="#CDE6EA"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudyBoardActivity">
+    tools:context=".others.StudyBoardActivity">
 
     <ImageView
         android:layout_width="match_parent"
