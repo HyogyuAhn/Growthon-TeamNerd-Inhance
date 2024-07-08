@@ -83,7 +83,7 @@
     <string name="Logout">로그아웃</string>
     <string name="Out">회원 탈퇴</string>
 
-    <string name="ProfileChange_TopName">프로필 변경</string>
+    <string name="ProfileChange_TopName">설정 변경</string>
     <string name="ProfileChange_Explain1">프로필과 상태 메시지를 통해</string>
     <string name="ProfileChange_Explain2">Nerd님을 자유롭게 표현해주세요!</string>
     <string name="NickNameChange_Explain1">*닉네임을 설정하면</string>
@@ -115,17 +115,17 @@
     <string name="PushAlarm_Explain3">nce</string>
     <string name="PushAlarm_Explain4">앱의 다양한 알림을 푸시로 받을 수 있습니다.</string>
     <string name="TimeTable">시간표</string>
-    <string name="School_Schedule">학사 일정</string>
+    <string name="School_Schedule">학사 일정 (준비중)</string>
     <string name="Food">오늘의 밥</string>
     <string name="Theme">테마 설정</string>
-    <string name="Dark_Mode">다크 모드</string>
+    <string name="Dark_Mode">다크 모드 (준비중)</string>
     <string name="Account_Setting">계정 설정</string>
     <string name="Account_Info">내 가입 정보</string>
-    <string name="Account_Info_Detail">Nerd1234@inha.edu</string>
+    <string name="Account_Info_Detail">{user_email}</string>
     <string name="Account_Info_Setting">계정 정보 설정</string>
     <string name="Help">도움</string>
     <string name="Version">버전 정보</string>
-    <string name="Version_Detail">현재 1.24.5 / 최신 1.24.5</string>
+    <string name="Version_Detail">현재 1.1.00121 / 최신 1.1.00121</string>
     <string name="Service">서비스 이용 약관</string>
     <string name="Personal_Info_System">개인 정보 처리 설정</string>
 

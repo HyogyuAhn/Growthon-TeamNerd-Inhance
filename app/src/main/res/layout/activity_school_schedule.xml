@@ -52,7 +52,7 @@
         android:id="@+id/schedule_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="오늘 5월 31일부터는\n인하대에 이런 일정이 있어요!"
+        android:text="오늘 6월 18일부터는\n인하대에 이런 일정이 있어요!"
         android:textSize="27sp"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -63,7 +63,7 @@
         android:id="@+id/schedule_date1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="05.31~06.13"
+        android:text="06.18~06.24"
         android:textSize="27sp"
         android:textStyle="bold"
         android:textColor="#000000"
@@ -73,17 +73,18 @@
 
     <RelativeLayout
         android:layout_width="340dp"
-        android:layout_height="230dp"
+        android:layout_height="340dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
+        android:padding="10dp"
         android:background="@drawable/announce_board">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="340dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="[학부-교외장학] 2024년도 1학기 강화군 장학생 선발 안내\n\n[인재개발팀] 미국 UMS 해외현장실습 장학생 추가 모집\n\n[인재개발팀] 추천채용 기업 설명회_(주)경신홀딩스,\n(주)경신전선, (주)경신\n\n[산단경영관리팀] 산학협력단 사무원(육아휴직대체인력)\n체용 공고\n\n[인하특강-CEO와 기업가 정신] 홍정표 한화생명 부사장\n초청 강연 안내"
+            android:text="[인하공학교육혁신센터] 2024 '반도체 융합캠프' 참가 학생 모집 안내 (~6.21)\n\n[인하공학교육혁신센터] 2024 창의융합캠프 참가 학생 모집 안내 (~6.21)\n\n[학부-국가장학] 2024년 2학기 국가장학금 1차 신청 안내 (~6.20)\n\n[채용] 인천시 미추홀구 어린이 사회복지급식관리지원센터 직원 모집 (~6.24)\n\n2024 [INHA SW NET-Zero 공동해커톤] 참여자 모집 (~6.19)\n\n[BK21대학원혁신] (KIRDX인하대) 2024학년도 이공계열 영어 논문작성 및 국제 학술발표 특강 신청 안내 (~6.21)"
             android:textSize="13sp"
             android:textStyle="bold"/>
 

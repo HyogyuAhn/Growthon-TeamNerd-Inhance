@@ -1,8 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#CDE6EA"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".home.SettingFragment">
+    android:layout_height="match_parent">
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="top"
+        android:src="@drawable/rectangle_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/ProfileChange_TopName"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="362dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="72dp"
+        android:background="#3D4690"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Alarm_Setting"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="72dp"
+        android:layout_marginStart="30dp" />
+
+    <Switch
+        android:id="@+id/push_switch"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:thumb="@drawable/switch_track_thumb"
+        android:track="@drawable/switch_track"
+        android:layout_marginTop="82dp"
+        android:layout_marginStart="340dp"/>
+
+    <View
+        android:layout_width="362dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="120dp"
+        android:background="#3D4690"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/PushAlarm_Setting"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="122dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="@string/PushAlarm_Explain1"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="173dp"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:text="@string/PushAlarm_Explain2"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#3D4690"
+        android:layout_marginTop="173dp"
+        android:layout_marginStart="55dp" />
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:text="@string/PushAlarm_Explain3"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="173dp"
+        android:layout_marginStart="71dp" />
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="25dp"
+        android:text="@string/PushAlarm_Explain4"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="173dp"
+        android:layout_marginStart="97dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/School_Schedule"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="30dp" />
+
+    <Switch
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:thumb="@drawable/switch_track_thumb"
+        android:track="@drawable/switch_track"
+        android:layout_marginTop="201dp"
+        android:layout_marginStart="340dp"
+        android:enabled="false"/>
+
+
+    <View
+        android:layout_width="362dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="240dp"
+        android:background="#3D4690"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Theme"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="242dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Dark_Mode"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="282dp"
+        android:layout_marginStart="30dp" />
+
+    <Switch
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:thumb="@drawable/switch_track_thumb"
+        android:track="@drawable/switch_track"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="340dp"
+        android:enabled="false"/>
+
+    <View
+        android:layout_width="362dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="332dp"
+        android:background="#3D4690"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Account_Setting"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="334dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Account_Info"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="376dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/setting_email"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textSize="10sp"
+        android:text="@string/Account_Info_Detail"
+        android:textColor="#7F7f7F"
+        android:layout_marginTop="387dp"
+        android:layout_marginStart="146dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Account_Info_Setting"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="418dp"
+        android:layout_marginStart="30dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:src="@drawable/arrow_black_right"
+        android:layout_marginTop="435dp"
+        android:layout_marginStart="350dp" />
+
+    <View
+        android:layout_width="362dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="468dp"
+        android:background="#3D4690"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Help"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="470dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Version"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="512dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:textSize="10sp"
+        android:text="@string/Version_Detail"
+        android:textColor="#7F7f7F"
+        android:layout_marginTop="521dp"
+        android:layout_marginStart="145dp" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Account_Info_Setting"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="554dp"
+        android:layout_marginStart="30dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="571dp"
+        android:src="@drawable/arrow_black_right" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:text="@string/Personal_Info_System"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="596dp"
+        android:layout_marginStart="30dp" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="615dp"
+        android:src="@drawable/arrow_black_right" />
+
+</RelativeLayout>

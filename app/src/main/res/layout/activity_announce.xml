@@ -49,7 +49,7 @@
             android:layout_height="20dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="인하대학교 지역상생 아이디어 공모전 참가침 모집 안내"
+            android:text="[원격교육지원센터] 실감 3면 콘텐츠 및 MR/VR 체험 Day"
             android:textSize="13sp"
             android:textStyle="bold"/>
 
@@ -75,7 +75,7 @@
             android:layout_height="20dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="[인하대_정석학술정보관] 지능형통합시스템 개통 기념"
+            android:text="2024 공공 SaaS 도입 성공전략 컨퍼런스 행사 안내"
             android:textSize="13sp"
             android:textStyle="bold"/>
 
@@ -98,10 +98,10 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="[인하대-교육기획팀]*비교과 프로그램 마일리지"
+            android:text="[개교 70주년 기념 '하와이-인하공원' 조형물 건립 기공식]\n인하대학교 디지털 역사관 웹페이지 안내"
             android:textSize="13sp"
             android:textStyle="bold"/>
 
@@ -127,7 +127,7 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="[인하대-디자인테크놀로지] 5/1 내부사정으로\nMX SPACE 실습실 대관 하지 않습니다."
+            android:text="2024 EMCA 학술 세미나\n'IB In Public School' 2024 IB Forum 개최"
             android:textSize="13sp"
             android:textStyle="bold"/>
 
@@ -153,7 +153,7 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="[인하대-학생지원팀] 인하대학교 학부생 및 대학원 대상\n국제학생증 ISIC 발급비 지원 행사"
+            android:text="[SW중심대학사업단] 2024 Advantech AIoT Innoworks Project 최종발표회"
             android:textSize="13sp"
             android:textStyle="bold"/>
 
@@ -176,10 +176,10 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="40dp"
             android:gravity="center"
             android:layout_centerVertical="true"
-            android:text="[총대의원회] 5/13~5/17은 인하대학교 여론조사"
+            android:text="[SW중심대학사업단] 2024-1학기 탄소중립 Innovation Academy 성과발표회"
             android:textSize="13sp"
             android:textStyle="bold"/>
 

@@ -94,4 +94,12 @@ public class AccountManager {
                 });
     }
 
+    public static void updateUser(User user) {
+        db.collection("users").document(user.getID())
+                .set(user)
+                .addOnSuccessListener(aVoid -> {
+                })
+                .addOnFailureListener(e -> {
+        });
+    }
 }

@@ -1,4 +1,4 @@
-package nerd.example.inha_project.others;
+package nerd.example.inha_project.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

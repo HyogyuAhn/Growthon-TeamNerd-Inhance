@@ -135,6 +135,7 @@
         android:layout_marginStart="40dp" />
 
     <ImageView
+        android:id="@+id/Logout_Img"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:src="@drawable/power"

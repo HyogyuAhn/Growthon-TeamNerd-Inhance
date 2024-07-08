@@ -3,7 +3,6 @@ package nerd.example.inha_project.home;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,7 +27,6 @@ import nerd.example.inha_project.database.AccountManager;
 import nerd.example.inha_project.database.callback.DBCallback;
 import nerd.example.inha_project.others.AnnounceActivity;
 import nerd.example.inha_project.others.SchoolScheduleActivity;
-import nerd.example.inha_project.others.TodoListActivity;
 import nerd.example.inha_project.util.DateUtil;
 import nerd.example.inha_project.util.todo.TodoItem;
 import nerd.example.inha_project.util.todo.TodoListAdapter;
